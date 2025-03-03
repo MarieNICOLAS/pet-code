@@ -7,24 +7,29 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>📑 To Do List 📑</h1>
-    <div class="container">
-        <input type="text" id="task-input" placeholder="Ajouter une tâche...">
-        <button id="add-task-btn">Ajouter</button>
-    </div>
+    
+    <div class="todo-container">
+        <div class="title-container">
+            <h1>📑 To Do List 📑</h1>
+        </div>
+        
+        <div class="filter">
+            <button id="filter-all">Toutes</button>
+            <button id="filter-active">En cours</button>
+            <button id="filter-completed">Terminées</button>
+        </div>
+        
+        <div class="input-container">
+            <input type="text" id="task-input" placeholder="Ajouter une tâche...">
+            <button id="add-task-btn">Ajouter</button>
+        </div>
 
-    <div class="list">
-        <ul id="task-list">
-            
-        </ul>
+        <div class="list">
+            <ul id="task-list">
+                <!-- Les tâches seront ajoutées ici dynamiquement -->
+            </ul>
+        </div>
     </div>
-
-    <div class="filter">
-        <button id="filter-all">Toutes</button>
-        <button id="filter-active">En cours</button>
-        <button id="filter-completed">Terminées</button>
-    </div>
-
 
     <script src="script.js"></script>
 </body>
