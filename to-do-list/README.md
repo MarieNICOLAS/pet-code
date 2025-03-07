@@ -43,7 +43,7 @@ todo-list/
 
 ### 🖥️ 1. Cloner le dépôt
 ```bash
-git clone https://github.com/ton-utilisateur/todo-list.git
+git clone https://github.com/MarieNICOLAS/pet-code.git
 cd todo-list
 ```
 
