@@ -2,6 +2,9 @@
 const taskInput = document.getElementById("task-input");
 const addTaskBtn = document.getElementById("add-task-btn");
 const taskList = document.getElementById("task-list");
+const filterAll = document.getElementById("filter-all");
+const filterActive = document.getElementById("filter-active");
+const filterCompleted = document.getElementById("filter-completed");
 
 /**
  * Saves the current task list to localStorage.
@@ -125,6 +128,28 @@ function deleteTask(event) {
     saveTasks();
 }
 
+/**
+ * Filters tasks based on the selected category.
+ * @param {string} filter - The filter type: "all", "active", or "completed".
+ */
+function filterTasks(filter) {
+    const tasks = document.querySelectorAll("li");
+    tasks.forEach(task => {
+        const isCompleted = task.querySelector("input").checked;
+        switch (filter) {
+            case "all":
+                task.style.display = "flex";
+                break;
+            case "active":
+                task.style.display = isCompleted ? "none" : "flex";
+                break;
+            case "completed":
+                task.style.display = isCompleted ? "flex" : "none";
+                break;
+        }
+    });
+}
+
 // Event listeners for task actions
 addTaskBtn.addEventListener("click", addTask);
 taskInput.addEventListener("keydown", (event) => {
@@ -132,6 +157,11 @@ taskInput.addEventListener("keydown", (event) => {
         addTask();
     }
 });
+
+// Event listeners for task filtering
+filterAll.addEventListener("click", () => filterTasks("all"));
+filterActive.addEventListener("click", () => filterTasks("active"));
+filterCompleted.addEventListener("click", () => filterTasks("completed"));
 
 // Load tasks on page load
 document.addEventListener("DOMContentLoaded", loadTasks);
