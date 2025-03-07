@@ -107,13 +107,11 @@ h1 {
     padding: 10px;
 }
 
-/* ✅ Liste des tâches */
 .list ul {
     list-style: none;
     padding: 0;
 }
 
-/* ✅ Style de chaque tâche */
 .list li {
     background: #fff;
     padding: 8px;
@@ -125,19 +123,16 @@ h1 {
     border: 2px solid #b38eff;
 }
 
-/* ✅ Style de la case à cocher */
 .task-checkbox {
     margin-right: 10px;
 }
 
-/* ✅ Effet "barré" quand la tâche est terminée */
 .completed {
     text-decoration: line-through;
     color: gray;
     opacity: 0.7;
 }
 
-/* ✅ Style du bouton 🗑️ */
 .delete-btn {
     border: none;
     background: none;
